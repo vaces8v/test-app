@@ -1,16 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import AppNavigator from './navigation/AppNavigator';
-import { useFonts } from 'expo-font';
+import * as Font from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 
-export default function App() {
-	const [fontsLoaded] = useFonts({
+const loadFonts = async () => {
+	await Font.loadAsync({
 		'Poppins-Medium': require('./assets/fonts/Poppins-Medium.ttf'),
 	});
+};
+
+export default function App() {
+	const [fontsLoaded, setFontsLoaded] = useState(false)
+
+	useEffect(() => {
+		loadFonts().then(() => setFontsLoaded(true));
+	}, []);
 
 	useEffect(() => {
 		async function prepare() {

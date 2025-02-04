@@ -38,15 +38,6 @@
 				"projectId": "3cb8c146-0baf-4398-b29c-0daf5a4f2431"
 			}
 		},
-		"cli": {
-			"appVersionSource": "remote"
-		},
-		"owner": "vaces8v",
-		"fonts": [
-			{
-				"asset": "./assets/fonts/Poppins-Medium.ttf",
-				"font": "Poppins-Medium"
-			}
-		]
+		"owner": "vaces8v"
 	}
 }
