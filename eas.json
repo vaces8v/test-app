@@ -1,0 +1,39 @@
+{
+	"cli": {
+		"appVersionSource": "remote"
+	},
+	"build": {
+		"preview": {
+			"android": {
+				"buildType": "apk",
+				"hermes": true,
+				"gradleCommand": ":app:bundleRelease",
+				"ndk": {
+					"abiFilters": [
+						"armeabi-v7a",
+						"arm64-v8a"
+					]
+				}
+			},
+			"env": {
+				"EXPO_PUBLIC_ENV": "preview"
+			}
+		},
+		"production": {
+			"android": {
+				"buildType": "apk",
+				"hermes": true,
+				"gradleCommand": ":app:bundleRelease"
+			},
+			"ios": {
+				"buildConfiguration": "Release"
+			},
+			"env": {
+				"EXPO_PUBLIC_ENV": "production"
+			}
+		}
+	},
+	"submit": {
+		"production": {}
+	}
+}

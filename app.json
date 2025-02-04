@@ -1,0 +1,52 @@
+{
+	"expo": {
+		"name": "TestApp",
+		"slug": "testapp",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/images/icon.png",
+		"userInterfaceStyle": "light",
+		"scheme": "testapp",
+		"newArchEnabled": true,
+		"splash": {
+			"image": "./assets/images/splash-icon.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"assetBundlePatterns": [
+			"**/*"
+		],
+		"ios": {
+			"supportsTablet": true,
+			"bundleIdentifier": "org.testapp.mobile",
+			"buildNumber": "1.0.0"
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/images/adaptive-icon.png",
+				"backgroundColor": "#ffffff"
+			},
+			"package": "org.testapp.mobile",
+			"versionCode": 1,
+			"softwareKeyboardLayoutMode": "pan"
+		},
+		"web": {
+			"favicon": "./assets/images/favicon.png"
+		},
+		"extra": {
+			"eas": {
+				"projectId": "3cb8c146-0baf-4398-b29c-0daf5a4f2431"
+			}
+		},
+		"cli": {
+			"appVersionSource": "remote"
+		},
+		"owner": "vaces8v",
+		"fonts": [
+			{
+				"asset": "./assets/fonts/Poppins-Medium.ttf",
+				"font": "Poppins-Medium"
+			}
+		]
+	}
+}
